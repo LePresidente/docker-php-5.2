@@ -8,6 +8,7 @@ The features are
 
 Features added by apelliciari:
 * Xdebug 2.2.7
+* enabled short tag PHP
 
 NOTE: To enable mailing, you need to configure ssmtp. This can be done by adding a file `ADD ssmtp.conf /etc/ssmtp/` containing a config like this
 ```
