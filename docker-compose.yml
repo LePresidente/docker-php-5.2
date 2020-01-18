@@ -1,0 +1,15 @@
+version: '3'
+
+services:
+  php:
+    container_name: php-52
+    # build: .
+    image: apelliciari/php-5.2
+    volumes:
+      - ./htdocs:/project
+      - ./php.ini:/etc/php/apache2-php5.2/php.ini
+    ports:
+      - "80:80"
+    restart: always
+    # command: tail -f /dev/null
+          

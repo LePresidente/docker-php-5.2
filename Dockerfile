@@ -48,7 +48,7 @@ RUN mkdir /php && \
         libxmu-headers libxmu6 libxpm-dev libxpm4 libxt-dev libxt6 linux-libc-dev \
         m4 make mlock mysql-common openssl patch pkg-config uuid-dev wget \
         x11-common x11proto-core-dev x11proto-input-dev x11proto-kb-dev \
-        x11proto-xext-dev xorg-sgml-doctools xtrans-dev zlib1g-dev \
+        x11proto-xext-dev xorg-sgml-doctools xtrans-dev zlib1g-dev autoconf \
     && \
     wget http://museum.php.net/php5/php-5.2.17.tar.bz2 && \
     tar xfj php-5.2.17.tar.bz2 && \
@@ -268,7 +268,8 @@ RUN mkdir /php && \
 
     # Add extensions
     pecl install Fileinfo && \
-    pecl install memcache && \
+    pecl install memcache-2.2.7 && \
+    pecl install xdebug-2.2.7 && \
     cd /php && \
     wget http://downloads.zend.com/optimizer/3.3.3/ZendOptimizer-3.3.3-linux-glibc23-x86_64.tar.gz && \
     tar xzf ZendOptimizer-3.3.3-linux-glibc23-x86_64.tar.gz && \
